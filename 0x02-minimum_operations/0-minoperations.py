@@ -40,8 +40,8 @@ def minOperations(n):
     else:
         return 0
 
-n = 4
-print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
+# n = 4
+# print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
 
-n = 12
-print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
+# n = 12
+# print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
