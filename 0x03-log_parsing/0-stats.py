@@ -3,6 +3,9 @@
 
 
 import sys
+import random
+from time import sleep
+import datetime
 
 cache = {'200': 0, '301': 0, '400': 0, '401': 0,
          '403': 0, '404': 0, '405': 0, '500': 0}
@@ -35,3 +38,17 @@ finally:
     for key, value in sorted(cache.items()):
         if value != 0:
             print('{}: {}'.format(key, value))
+
+# testing script
+for i in range(10000):
+    sleep(random.random())
+    sys.stdout.write("{:d}.{:d}.{:d}.{:d} - [{}] \
+                     \"GET /projects/260 HTTP/1.1\" {} {}\n".format(
+                        random.randint(1, 255), random.randint(1, 255),
+                        random.randint(1, 255), random.randint(1, 255),
+                        datetime.datetime.now(),
+                        random.choice([200, 301, 400, 401, 403,
+                                       404, 405, 500]),
+                        random.randint(1, 1024)
+    ))
+    sys.stdout.flush()
