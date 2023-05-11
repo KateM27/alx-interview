@@ -1,4 +1,7 @@
+#!/usr/bin/env python3
+
 def rotate_2d_matrix(matrix):
+    """rotate a 2D matrix"""
     n = len(matrix)
     # transpose the matrix
     for i in range(n):
