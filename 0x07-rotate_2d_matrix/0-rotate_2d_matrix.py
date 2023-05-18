@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 def rotate_2d_matrix(matrix):
     """rotate a 2D matrix"""
@@ -10,3 +10,8 @@ def rotate_2d_matrix(matrix):
     # reverse each row of the transposed matrix
     for i in range(n):
         matrix[i] = matrix[i][::-1]
+
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+rotate_2d_matrix(matrix)
+print(matrix)
